@@ -8,12 +8,14 @@
   <body>
     <h1>Open the console</h1>
     <script>
-      function light(string, callback){
-        window.setTimeout(function (){
-          console.log(string)}, 1000)
-        
 
-      }
+function light(num, callback) {
+  window.setTimeout(() => callback(console.log('hello')), 1000);
+}
+
+light(10, (x) => console.log(x));
+
+
     </script>
   </body>
 </html>
