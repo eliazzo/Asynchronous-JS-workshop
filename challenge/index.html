@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge | Functions and asynchronous JavaScript</title>
+  </head>
+  <body>
+    <h1>Open the console</h1>
+    <script>
+
+function light(string, callback) { // function light with two arguments
+  window.setTimeout(() => { // setTimeout to enforce 1 second wait
+    console.log(string); // console.log the colour
+    callback(); // call the callback function
+  }, 1000);
+}
+
+
+
+light("red", () => { // function light with argument 1 "red" and argument 2 "light("yellow", () => {} etc)
+  light("yellow", () => {
+    light("green", () => {
+
+    })
+  })
+})
+
+    </script>
+  </body>
+</html>
